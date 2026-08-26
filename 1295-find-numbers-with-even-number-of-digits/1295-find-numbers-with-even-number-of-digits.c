@@ -1,16 +1,11 @@
 int findNumbers(int* nums, int numsSize)
 {
-    int res,count = 0;
+    int res,x = 0;
     for(int i=0; i<numsSize ; i++)
     {
-        count = 0;
-        while(nums[i])
-        {
-            nums[i] = nums[i]/10;
-            count++;         
-        }
-        if(count % 2 == 0){
-            res += 1;
+        x = nums[i];
+        if(9<x && x<100 || 999<x && x<10000 || x==100000){
+            res++;
         }
     }
     return res;
